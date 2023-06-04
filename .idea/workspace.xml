@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f84a182d-bf6e-4d34-979d-0c4c41ed1c04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/controller/ServiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/CoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/ICoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/core/service/CoreServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Qg2v3qZaXNfWkoGgP6oUY08Xqu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Desafios tecnicos/between-getprice-challenge",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "010a5db8bbcc6a7d3c13d7931775f460"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.afvergani.backendtest.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CoreServiceTest">
+    <configuration name="CoreServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backendTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.afvergani.backendtest.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.afvergani.backendtest.core.service" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.core.service.CoreServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backendTest" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.afvergani.backendtest.BackendTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CoreServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f84a182d-bf6e-4d34-979d-0c4c41ed1c04" name="Changes" comment="" />
+      <created>1685761133178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685761133178</updated>
+      <workItem from="1685761134757" duration="170000" />
+      <workItem from="1685761312840" duration="757000" />
+      <workItem from="1685762086480" duration="217000" />
+      <workItem from="1685817251304" duration="23000" />
+      <workItem from="1685817290638" duration="10389000" />
+      <workItem from="1685829858684" duration="1568000" />
+      <workItem from="1685903852630" duration="17445000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
