@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  nest-api:
+    image: backendtest-1.0.0
+    restart: always
+    container_name: backendtest
+    ports:
+      - 5000

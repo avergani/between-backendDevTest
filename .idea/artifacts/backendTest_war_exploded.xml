@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="backendTest:war exploded">
-    <output-path>$PROJECT_DIR$/backendTest/target/backendTest-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/backendTest/target/backendTest-1.0.0</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -20,7 +20,6 @@
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.4.7" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.4.7" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.20.0" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" />
           <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:2.0.7" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.33" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:3.1.0" />
@@ -44,10 +43,12 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.7" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:6.0.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:6.0.9" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.14.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/backendTest/target/backendTest-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/backendTest/target/backendTest-1.0.0/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="backendTest/web/Web" />
     </root>

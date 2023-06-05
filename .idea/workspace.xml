@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f84a182d-bf6e-4d34-979d-0c4c41ed1c04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/controller/ServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/CoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/ICoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/core/service/CoreServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/core/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/backendTest_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/backendTest_war.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/backendTest_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/backendTest_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_10_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendTest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backendTest/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/controller/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/controller/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/CoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/CoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/ICoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/main/java/com/afvergani/backendtest/core/service/ICoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/core/service/CoreServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backendTest/src/test/java/com/afvergani/backendtest/core/service/CoreServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Desafios tecnicos/between-getprice-challenge",
     "project.structure.last.edited": "Project",
@@ -69,8 +76,8 @@
       <recent name="com.afvergani.backendtest.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CoreServiceTest">
-    <configuration name="CoreServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.BackendTestApplication">
+    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backendTest" />
       <extension name="coverage">
         <pattern>
@@ -79,8 +86,71 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.afvergani.backendtest.core.service" />
-      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.core.service.CoreServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.core.service.ProductServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testGetSimilarProducts_Exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backendTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.afvergani.backendtest.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.afvergani.backendtest.core.service" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.core.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testGetSimilarProducts_Exception" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backendTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.afvergani.backendtest.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.afvergani.backendtest.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.controller.ServiceControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceControllerTest.getSimilarProducts_InvalidProductId_ReturnsHttpStatusNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backendTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.afvergani.backendtest.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.afvergani.backendtest.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.Controller.ServiceControllerTest" />
+      <option name="METHOD_NAME" value="getSimilarProducts_InvalidProductId_ReturnsHttpStatusNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceControllerTest.testGetSimilarProducts_Exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backendTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.afvergani.backendtest.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.afvergani.backendtest.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.afvergani.backendtest.controller.ServiceControllerTest" />
+      <option name="METHOD_NAME" value="testGetSimilarProducts_Exception" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,7 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CoreServiceTest" />
+        <item itemvalue="JUnit.ServiceControllerTest.getSimilarProducts_InvalidProductId_ReturnsHttpStatusNotFound" />
+        <item itemvalue="JUnit.ServiceControllerTest" />
+        <item itemvalue="JUnit.ServiceControllerTest.testGetSimilarProducts_Exception" />
+        <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="JUnit.ProductServiceTest.testGetSimilarProducts_Exception" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +187,8 @@
       <workItem from="1685817290638" duration="10389000" />
       <workItem from="1685829858684" duration="1568000" />
       <workItem from="1685903852630" duration="17445000" />
+      <workItem from="1685931180042" duration="4501000" />
+      <workItem from="1685965531956" duration="22889000" />
     </task>
     <servers />
   </component>

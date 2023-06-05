@@ -33,8 +33,8 @@ public class ServiceController {
 
         //Generate a random UUID for each request
         String requestId = UUID.randomUUID().toString();
-        logger.info(requestId + " | Counter: " + counter);
-        counter++;
+        logger.info(requestId + " | New Request: " + requestId);
+
         try {
             ResponseEntity<?> response = productService.getSimilarProducts(requestId, productId);
             logger.info(requestId + " | Controller: " + Objects.requireNonNull(response.toString()));

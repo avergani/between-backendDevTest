@@ -1,84 +1,147 @@
 package com.afvergani.backendtest.core.service;
 
-import org.junit.jupiter.api.Assertions;
+import com.afvergani.backendtest.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.util.ReflectionTestUtils;
 
+import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 
-@ExtendWith(SpringExtension.class)
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
-@PropertySource("classpath:application.properties")
+@TestPropertySource(properties = {"get.similar.products.id.url=http://localhost:3001/product","get.product.detail.url=http://localhost:3001/product"})
 public class CoreServiceTest {
 
-    private CoreService coreService;
+    @Mock
     private HttpClient httpClient;
-    private HttpResponse<String> successResponse;
-    private HttpResponse<String> errorResponse;
+
+    @Autowired
+    private CoreService coreService;
 
     @BeforeEach
     public void setup() {
         coreService = new CoreService();
-        httpClient = Mockito.mock(HttpClient.class);
-        coreService.setHttpClient(httpClient);
+        coreService.httpClient = httpClient;
 
-        // Configurar respuestas simuladas
-        successResponse = Mockito.mock(HttpResponse.class);
-        Mockito.when(successResponse.statusCode()).thenReturn(200);
-        Mockito.when(successResponse.body()).thenReturn("[\"1\",\"2\",\"3\"]");
-
-        errorResponse = Mockito.mock(HttpResponse.class);
-        Mockito.when(errorResponse.statusCode()).thenReturn(404);
     }
 
     @Test
-    public void testGetSimilarProductsIds_Success() throws Exception {
-        // Configurar el comportamiento simulado del cliente HTTP
-        Mockito.when(httpClient.send(Mockito.any(HttpRequest.class), Mockito.any(HttpResponse.BodyHandler.class)))
-                .thenReturn(successResponse);
+    public void testGetSimilarProductsIds_SuccessfulRequest() throws Exception {
+        String requestId = "123";
+        String productId = "4";
+        String responseJson = "[1,2,3]";
+        ReflectionTestUtils.setField(coreService, "similarProductIdUrl", "http://localhost:3001/product");
+        URI expectedUri = new URI("http://localhost:3001/product/4/similarids");
 
-        // Ejecutar el método bajo prueba
-        List<String> result = coreService.getSimilarProductsIds("requestId", "productId");
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(expectedUri)
+                .GET()
+                .build();
 
-        // Verificar el resultado
-        Assertions.assertNotNull(result);
-        Assertions.assertEquals(3, result.size());
-        Assertions.assertTrue(result.contains("1"));
-        Assertions.assertTrue(result.contains("2"));
-        Assertions.assertTrue(result.contains("3"));
+
+        HttpResponse response = Mockito.mock(HttpResponse.class);
+        when(response.statusCode()).thenReturn(200);
+        when(response.body()).thenReturn(responseJson);
+
+        when(httpClient.send(Mockito.eq(request), Mockito.any(HttpResponse.BodyHandler.class)))
+                .thenReturn(response);
+
+        List<String> similarProductsIds = coreService.getSimilarProductsIds(requestId, productId);
+
+        verify(httpClient).send(Mockito.eq(request), Mockito.any(HttpResponse.BodyHandler.class));
+        assertEquals(List.of("1", "2", "3"), similarProductsIds);
     }
 
     @Test
-    public void testGetSimilarProductsIds_Error() throws Exception {
-        // Configurar el comportamiento simulado del cliente HTTP
-        Mockito.when(httpClient.send(Mockito.any(HttpRequest.class), Mockito.any(HttpResponse.BodyHandler.class)))
-                .thenReturn(errorResponse);
+    public void testGetSimilarProductsIds_RequestFailed() throws Exception {
+        String requestId = "123";
+        String productId = "4";
+        ReflectionTestUtils.setField(coreService, "similarProductIdUrl", "http://localhost:3001/product");
+        URI expectedUri = new URI("http://localhost:3001/product/4/similarids");
 
-        // Ejecutar el método bajo prueba
-        List<String> result = coreService.getSimilarProductsIds("requestId", "productId");
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(expectedUri)
+                .GET()
+                .build();
 
-        // Verificar el resultado
-        Assertions.assertNull(result);
+        HttpResponse response = Mockito.mock(HttpResponse.class);
+        when(response.statusCode()).thenReturn(404);
+
+        when(httpClient.send(Mockito.eq(request), Mockito.any(HttpResponse.BodyHandler.class)))
+                .thenReturn(response);
+
+
+        List<String> similarProductsIds = coreService.getSimilarProductsIds(requestId, productId);
+
+        verify(httpClient).send(request, HttpResponse.BodyHandlers.ofString());
+        assertNull(similarProductsIds);
     }
 
     @Test
-    public void testGetSimilarProductsIds_Exception() throws Exception {
-        // Configurar el comportamiento simulado del cliente HTTP para lanzar una excepción
-        Mockito.when(httpClient.send(Mockito.any(HttpRequest.class), Mockito.any(HttpResponse.BodyHandler.class)))
-                .thenThrow(new RuntimeException("Error al enviar la solicitud HTTP"));
+    public void testGetProductDetailService_SuccessfulRequest() throws Exception {
+        String requestId = "123";
+        String productId = "4";
+        String responseJson = "{\"id\":\"4\",\"name\":\"Product Name\",\"price\":9.99,\"availability\":true}";
+        ReflectionTestUtils.setField(coreService, "productDetailUrl", "http://localhost:3001/product");
+        URI expectedUri = new URI("http://localhost:3001/product/4");
 
-        // Ejecutar el método bajo prueba
-        List<String> result = coreService.getSimilarProductsIds("requestId", "productId");
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(expectedUri)
+                .GET()
+                .build();
 
-        // Verificar el resultado
-        Assertions.assertNull(result);
+        HttpResponse response = Mockito.mock(HttpResponse.class);
+        when(response.statusCode()).thenReturn(200);
+        when(response.body()).thenReturn(responseJson);
+
+        when(httpClient.send(Mockito.eq(request), Mockito.any(HttpResponse.BodyHandler.class)))
+                .thenReturn(response);
+
+        Product product = coreService.getProductDetailService(requestId, productId);
+
+        verify(httpClient).send(request, HttpResponse.BodyHandlers.ofString());
+        assertEquals("4", product.getId());
+        assertEquals("Product Name", product.getName());
+        assertEquals(9.99, product.getPrice(), 0.001);
+        assertTrue(product.isAvailability());
+    }
+
+    @Test
+    public void testGetProductDetailService_RequestFailed() throws Exception {
+        String requestId = "123";
+        String productId = "4";
+        ReflectionTestUtils.setField(coreService, "productDetailUrl", "http://localhost:3001/product");
+
+        URI expectedUri = new URI("http://localhost:3001/product/4");
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(expectedUri)
+                .GET()
+                .build();
+
+        HttpResponse response = Mockito.mock(HttpResponse.class);
+        when(response.statusCode()).thenReturn(404);
+
+        when(httpClient.send(request, HttpResponse.BodyHandlers.ofString())).thenReturn(response);
+
+        Product product = coreService.getProductDetailService(requestId, productId);
+
+        verify(httpClient).send(request, HttpResponse.BodyHandlers.ofString());
+        assertNull(product);
     }
 }
